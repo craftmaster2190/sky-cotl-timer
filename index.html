@@ -12,13 +12,53 @@
 <h1>Sky: Children of the Light Timers</h1>
 <h2>What's happenening now or soon in Sky?</h2>
 
-<div id="timers">
-    <div id="now"></div>
-    <div id="nextEyeOfEdenReset"></div>
-    <div id="nextDailyLightReset"></div>
-    <div id="nextSanctuaryGeyser"></div>
-    <div id="nextHiddenForestGrandmasDinner"></div>
-    <div id="nextSanctuaryTurtle"></div>
+<div class="timers">
+    <div class="now">
+        <div class="statusText"></div>
+    </div>
+    <div class="nextEyeOfEdenReset">
+        <div class="statusText"></div>
+        <div class="collectedAscendedCandles">
+            <input id="collectedAscendedCandlesCheckbox" name="collectedAscendedCandlesCheckbox" type="checkbox">
+            <label for="collectedAscendedCandlesCheckbox">I've collected ascended candles this week.</label>
+        </div>
+    </div>
+    <div class="nextDailyLightReset">
+        <div class="statusText"></div>
+        <div class="collectedCandles">
+            <input id="collectedCandlesCheckbox" name="collectedCandlesCheckbox" type="checkbox">
+            <label for="collectedCandlesCheckbox">I've collected 15 candles today</label>
+        </div>
+        <div class="collectedSeasonalCandle">
+            <input id="collectedSeasonalCandleCheckbox" name="collectedSeasonalCandleCheckbox" type="checkbox">
+            <label for="collectedSeasonalCandleCheckbox">I've collected 1 seasonal candle today</label>
+        </div>
+        <div class="completedSeasonalQuests">
+            <input id="completedSeasonalQuestsCheckbox" name="completedSeasonalQuestsCheckbox" type="checkbox">
+            <label for="completedSeasonalQuestsCheckbox">I've completed 4 seasonal quests today</label>
+        </div>
+    </div>
+    <div class="nextSanctuaryGeyser">
+        <div class="statusText"></div>
+        <div class="visitTheGeyser">
+            <input id="visitTheGeyserCheckbox" name="visitTheGeyserCheckbox" type="checkbox">
+            <label for="visitTheGeyserCheckbox">I've visited the Geyser today</label>
+        </div>
+    </div>
+    <div class="nextHiddenForestGrandmasDinner">
+        <div class="statusText"></div>
+        <div class="visitGrandma">
+            <input id="visitGrandmaCheckbox" name="visitGrandmaCheckbox" type="checkbox">
+            <label for="visitGrandmaCheckbox">I've visited the Grandma today</label>
+        </div>
+    </div>
+    <div class="nextSanctuaryTurtle">
+        <div class="statusText"></div>
+        <div class="visitTheTurtle">
+            <input id="visitTheTurtleCheckbox" name="visitTheTurtleCheckbox" type="checkbox">
+            <label for="visitTheTurtleCheckbox">I've visited the Turtle today</label>
+        </div>
+    </div>
 </div>
 
 <script src="timers.js"></script>
