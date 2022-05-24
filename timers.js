@@ -132,6 +132,13 @@ function initHtml() {
         "visitTheGeyserCheckbox": nextDailyLightReset(),
         "visitGrandmaCheckbox": nextDailyLightReset(),
         "visitTheTurtleCheckbox": nextDailyLightReset(),
+
+        "visitTheDailyCandleRealm": nextDailyLightReset(),
+        "visitTheAbyss": nextDailyLightReset(),
+        "completeTheLandRace": nextDailyLightReset(),
+        "completeTheWindRace": nextDailyLightReset(),
+        "completeTheEightPlayerPuzzle": nextDailyLightReset(),
+        "visitTheDailyCandleRealm": nextDailyLightReset(),
     }).forEach(([name, expiry]) => {
         const checkboxNamedCache = cache(name, expiry);
         jQuery("#" + name).prop("checked", checkboxNamedCache.isChecked());

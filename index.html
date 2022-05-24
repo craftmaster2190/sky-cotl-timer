@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <script crossorigin="anonymous" referrerpolicy="no-referrer"
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script crossorigin="anonymous" referrerpolicy="no-referrer"
             src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
     <script crossorigin="anonymous" referrerpolicy="no-referrer"
             src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+    <style>
+        body {
+            font-size: 1em;
+            margin: 16px;
+        }
+
+        .checkboxContainer {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkboxContainer input[type=checkbox] {
+            margin-right: 8px;
+        }
+
+        .statusText {
+            margin-top: 12px;
+        }
+    </style>
 </head>
 <body>
 <h1>Sky: Children of the Light Timers</h1>
-<h2>What's happenening now or soon in Sky?</h2>
+<h2>A Farming Helper</h2>
 
 <div class="timers">
     <div class="now">
@@ -18,45 +40,77 @@
     </div>
     <div class="nextEyeOfEdenReset">
         <div class="statusText"></div>
-        <div class="collectedAscendedCandles">
+        <div class="collectedAscendedCandles checkboxContainer">
             <input id="collectedAscendedCandlesCheckbox" name="collectedAscendedCandlesCheckbox" type="checkbox">
             <label for="collectedAscendedCandlesCheckbox">I've collected ascended candles this week.</label>
         </div>
     </div>
     <div class="nextDailyLightReset">
         <div class="statusText"></div>
-        <div class="collectedCandles">
+        <div class="collectedCandles checkboxContainer">
             <input id="collectedCandlesCheckbox" name="collectedCandlesCheckbox" type="checkbox">
             <label for="collectedCandlesCheckbox">I've collected 15 candles today</label>
         </div>
-        <div class="collectedSeasonalCandle">
+        <div class="collectedSeasonalCandle checkboxContainer">
             <input id="collectedSeasonalCandleCheckbox" name="collectedSeasonalCandleCheckbox" type="checkbox">
             <label for="collectedSeasonalCandleCheckbox">I've collected 1 seasonal candle today</label>
         </div>
-        <div class="completedSeasonalQuests">
+        <div class="completedSeasonalQuests checkboxContainer">
             <input id="completedSeasonalQuestsCheckbox" name="completedSeasonalQuestsCheckbox" type="checkbox">
             <label for="completedSeasonalQuestsCheckbox">I've completed 4 seasonal quests today</label>
         </div>
     </div>
     <div class="nextSanctuaryGeyser">
         <div class="statusText"></div>
-        <div class="visitTheGeyser">
+        <div class="visitTheGeyser checkboxContainer">
             <input id="visitTheGeyserCheckbox" name="visitTheGeyserCheckbox" type="checkbox">
             <label for="visitTheGeyserCheckbox">I've visited the Geyser today</label>
         </div>
     </div>
     <div class="nextHiddenForestGrandmasDinner">
         <div class="statusText"></div>
-        <div class="visitGrandma">
+        <div class="visitGrandma checkboxContainer">
             <input id="visitGrandmaCheckbox" name="visitGrandmaCheckbox" type="checkbox">
             <label for="visitGrandmaCheckbox">I've visited the Grandma today</label>
         </div>
     </div>
     <div class="nextSanctuaryTurtle">
         <div class="statusText"></div>
-        <div class="visitTheTurtle">
+        <div class="visitTheTurtle checkboxContainer">
             <input id="visitTheTurtleCheckbox" name="visitTheTurtleCheckbox" type="checkbox">
             <label for="visitTheTurtleCheckbox">I've visited the Turtle today</label>
+        </div>
+    </div>
+    <div class="additionalCandleLocations">
+        <div class="statusText">
+            Additional Candle Farming Locations
+        </div>
+        <div class="visitTheDailyCandleRealm checkboxContainer">
+            <input id="visitTheDailyCandleRealmCheckbox" name="visitTheDailyCandleRealmCheckbox" type="checkbox">
+            <label for="visitTheDailyCandleRealmCheckbox">I've visited the Daily Candle Realm today</label>
+        </div>
+        <div class="visitTheAbyss checkboxContainer">
+            <input id="visitTheAbyssCheckbox" name="visitTheAbyssCheckbox" type="checkbox">
+            <label for="visitTheAbyssCheckbox">I've visited the Abyss to collect clams today</label>
+        </div>
+        <div class="completeTheLandRace checkboxContainer">
+            <input id="completeTheLandRaceCheckbox" name="completeTheLandRaceCheckbox" type="checkbox">
+            <label for="completeTheLandRaceCheckbox">I've completed the Land Race in the Valley today</label>
+        </div>
+        <div class="completeTheWindRace checkboxContainer">
+            <input id="completeTheWindRaceCheckbox" name="completeTheWindRaceCheckbox" type="checkbox">
+            <label for="completeTheWindRaceCheckbox">I've completed the Wind Race in the Valley today</label>
+        </div>
+        <div class="completeTheEightPlayerPuzzle checkboxContainer">
+            <input id="completeTheEightPlayerPuzzleCheckbox" name="completeTheEightPlayerPuzzleCheckbox"
+                   type="checkbox">
+            <label for="completeTheEightPlayerPuzzleCheckbox">I've completed the 8 Player Puzzle in the Prairie
+                today</label>
+        </div>
+        <div class="visitTheHotSpring checkboxContainer">
+            <input id="visitTheHotSpringCheckbox" name="visitTheHotSpringCheckbox"
+                   type="checkbox">
+            <label for="visitTheHotSpringCheckbox">I've visited the Hot Spring in the Valley today</label>
         </div>
     </div>
 </div>
