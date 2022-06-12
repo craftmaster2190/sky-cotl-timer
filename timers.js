@@ -125,13 +125,13 @@ function timerHtml() {
 
 function initHtml() {
     Object.entries({
-        "collectedAscendedCandlesCheckbox": nextEyeOfEdenReset(),
-        "collectedCandlesCheckbox": nextDailyLightReset(),
-        "collectedSeasonalCandleCheckbox": nextDailyLightReset(),
-        "completedSeasonalQuestsCheckbox": nextDailyLightReset(),
-        "visitTheGeyserCheckbox": nextDailyLightReset(),
-        "visitGrandmaCheckbox": nextDailyLightReset(),
-        "visitTheTurtleCheckbox": nextDailyLightReset(),
+        "collectedAscendedCandles": nextEyeOfEdenReset(),
+        "collectedCandles": nextDailyLightReset(),
+        "collectedSeasonalCandle": nextDailyLightReset(),
+        "completedSeasonalQuests": nextDailyLightReset(),
+        "visitTheGeyser": nextDailyLightReset(),
+        "visitGrandma": nextDailyLightReset(),
+        "visitTheTurtle": nextDailyLightReset(),
 
         "visitTheDailyCandleRealm": nextDailyLightReset(),
         "visitTheAbyss": nextDailyLightReset(),
@@ -141,8 +141,8 @@ function initHtml() {
         "visitTheDailyCandleRealm": nextDailyLightReset(),
     }).forEach(([name, expiry]) => {
         const checkboxNamedCache = cache(name, expiry);
-        jQuery("#" + name).prop("checked", checkboxNamedCache.isChecked());
-        jQuery("#" + name).change(checkboxNamedCache.toggleCheck);
+        jQuery("#" + name + "Checkbox").prop("checked", checkboxNamedCache.isChecked());
+        jQuery("#" + name + "Checkbox").change(checkboxNamedCache.toggleCheck);
     });
 }
 
